@@ -1,0 +1,17 @@
+<div class="service" id="service-section">
+  <div class="heading">
+    <div class="heading-border">
+      <h1 class="service-heading" i18n>&nbsp;What I Do? ✅&nbsp;</h1>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="row">
+      <div class="col col-lg-4 col-md-6 col-sm-12" *ngFor="let task of whatIDo">
+        <div class="card">
+          <p class="txt" i18n>{{task}}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
