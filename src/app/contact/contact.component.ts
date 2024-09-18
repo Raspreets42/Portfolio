@@ -12,24 +12,28 @@ export class ContactComponent implements OnInit {
 
   contacts = [
     {
-      class: 'fa-brands fa-twitter',
-      social: 'Twitter',
-      username: 'ShahbaazX',
+      class: 'fa-solid fa-phone',
+      social: 'Phone',
+      username: '8962942505',
+      href: 'tel:+918962942505'
     },
     {
       class: 'fa-solid fa-envelope',
       social: 'Contact Me',
-      username: 'Drop me a Mail',
+      username: 'raspreetsp04@gmail.com',
+      href: 'mailto:raspreetsp04@gmail.com'
     },
     {
       class: 'fa-brands fa-github',
       social: 'Github',
-      username: 'ShahbaazX786',
+      username: 'Raspreets42',
+      href: 'https://github.com/Raspreets42'
     },
     {
-      class: 'fa-brands fa-linkedin',
-      social: 'LinkedIn',
-      username: 'Shaik Shahbaaz Alam',
+      class: 'fa-solid fa-code',
+      social: 'Leetcode',
+      username: 'RaspreetSingh',
+      href: 'https://leetcode.com/u/RaspreetSingh/'
     },
   ];
 }

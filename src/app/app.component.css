@@ -1,0 +1,40 @@
+/* Make sure the body and html take the full height of the viewport */
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    overflow: hidden; /* Prevent the whole page from scrolling */
+}
+
+/* Style for the header */
+app-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 60px; /* Adjust height as needed */
+    background-color: #f8f9fa; /* Example background color */
+    z-index: 1000; /* Ensure the header stays on top */
+}
+
+/* Style for the footer */
+app-footer {
+    position: fixed;
+    bottom: 5px;
+    left: 0;
+    right: 0;
+    height: 50px; /* Adjust height as needed */
+    background-color: #f8f9fa; /* Example background color */
+    z-index: 1000; /* Ensure the footer stays on top */
+}
+
+/* Style for the content (scrollable area) */
+.content {
+    position: absolute;
+    top: 60px; /* Same as header height */
+    bottom: 50px; /* Same as footer height */
+    left: 0;
+    right: 0;
+    overflow-y: auto; /* Allow scrolling for the router-outlet */
+    padding: 20px; /* Optional padding */
+}

@@ -9,6 +9,9 @@ export class HeaderComponent implements OnInit {
 
   constructor() { }
 
+  phoneTo = "tel:+918962942505"
+  mailTo = "mailto:raspreetsp04@gmail.com";
+
   ngOnInit(): void {
   }
 
