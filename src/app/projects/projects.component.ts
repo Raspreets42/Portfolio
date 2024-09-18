@@ -1,40 +1,78 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, EventEmitter, OnInit, Output} from '@angular/core';
 
 @Component({
   selector: 'app-projects',
   templateUrl: './projects.component.html',
-  styleUrls: ['./projects.component.css'],
+  styleUrls: ['./projects.component.scss'],
 })
 export class ProjectsComponent implements OnInit {
   constructor() {}
 
   ngOnInit(): void {}
 
+  @Output() closeModal = new EventEmitter<void>();
+
+  onClose() {
+    this.closeModal.emit();
+    this.showModal = false;
+  }
+
+  showModal = false;
+
+  clickedProject = {
+    'role': '',
+    'Desc': ''
+  };
+
+  assignClickedProject(proj: any){
+    this.clickedProject = proj;
+    this.showModal = true;
+  }
+
   projects = [
     {
-      Name: 'SHE HULK by Titannia',
-      Link: 'https://github.com/ShahbaazX786/SHE-HULK-by-Titannia',
+      Name: 'AgriPilot.AI',
+      role: 'Full Stack Developer',
+      Link: '',
       screenshot:
-        '../../assets/img/external/Project-screenshots/construction.png',
-      Desc: 'This website is a personal project made on the little glimpse i got in the Marvels SHE HULK Episode 5',
+        '../../assets/img/external/Project-screenshots/agriculture.webp',
+      headline: 'AgriPilot.AI is an AI-driven agriculture platform which provides analytics-driven sights to the farmers and agribusiness across their value chains to make farming sustainable and profitable.',
+      Desc: '• Developed efficient and secure web applications, focusing on improving user interactions with websites and applications.\n' +
+          '• Identified and resolved complex technical issues, showcasing strong analytical and problem-solving abilities.\n' +
+          '• Collaborated with the web development team to design and implement user interfaces for client websites using HTML, JavaScript, and Angular.\n' +
+          '• Designed and implemented RESTful APIs to ensure seamless communication between front-end and back-end systems.',
       stack: [
         {
-          img: '../../assets/img/external/svg/html.svg',
-        },
-        {
-          img: '../../assets/img/external/svg/css..svg',
-        },
-        {
           img: '../../assets/img/external/svg/javascript.svg',
+        },
+        {
+          img: '../../assets/img/external/svg/angular.svg',
+        },
+        {
+          img: '../../assets/img/external/svg/go.png',
+        },
+        {
+          img: '../../assets/img/external/svg/api.svg',
+        },
+        {
+          img: '../../assets/img/external/svg/sql.svg',
+        },
+        {
+          img: '../../assets/img/external/svg/mongodb.svg',
         },
       ],
     },
     {
-      Name: 'Pizzeria',
-      Link: 'https://github.com/ShahbaazX786/Pizzeria',
+      Name: 'Landing Zone - CloudIntel',
+      role: 'Full Stack Developer',
+      Link: '',
       screenshot:
-        '../../assets/img/external/Project-screenshots/construction.png',
-      Desc: 'Order your pizza with customizations and get it delivered at your door',
+        '../../assets/img/external/Project-screenshots/landingzone.png',
+      headline: 'Landing zone is an module integrated in our CloudIntel product which provides the features to deploy the resources on Microsoft services using terraform scripts.',
+      Desc: '• As a Full-Stack Developer, I was responsible for efficient and secure web application, RESTful API’s\n' +
+          '• Integrated third-party API’s to enhance functionality and streamline user experiences.\n' +
+          '• Optimized code and application performance by implementing efficient debugging strategies, reducing errors and improving response times.\n' +
+          '• Engaged in and led code reviews to uphold code quality, enforce best practices, and facilitate knowledge exchange within the team.\n',
       stack: [
         {
           img: '../../assets/img/external/svg/html.svg',
@@ -52,7 +90,7 @@ export class ProjectsComponent implements OnInit {
           img: '../../assets/img/external/svg/nodejs.svg',
         },
         {
-          img: '../../assets/img/external/svg/mongodb.svg',
+          img: '../../assets/img/external/svg/sql.svg',
         },
         {
           img: '../../assets/img/external/svg/express-js.svg',
@@ -60,18 +98,15 @@ export class ProjectsComponent implements OnInit {
       ],
     },
     {
-      Name: 'Weather Forecast Webapp',
-      Link: 'https://github.com/ShahbaazX786/weather-angular',
+      Name: 'Talent Management Portal',
+      role: 'Full Stack Developer',
+      Link: '',
       screenshot:
-        '../../assets/img/external/Project-screenshots/construction.png',
-      Desc: 'Find out the weather forecast across the world using this webapp',
+        '../../assets/img/external/Project-screenshots/talent.png',
+      headline: 'A software solution to oversee employee skills and development, enhancing the ability to attract and retain top talent.',
+      Desc: '• Responsible for building a secure and efficient web application, designing RESTful APIs, and managing API integration.\n' +
+          '• Implemented effective debugging strategies to streamline code and enhance overall application performance',
       stack: [
-        {
-          img: '../../assets/img/external/svg/html.svg',
-        },
-        {
-          img: '../../assets/img/external/svg/css..svg',
-        },
         {
           img: '../../assets/img/external/svg/javascript.svg',
         },
@@ -81,95 +116,14 @@ export class ProjectsComponent implements OnInit {
         {
           img: '../../assets/img/external/svg/api.svg',
         },
-      ],
-    },
-    {
-      Name: 'TinDoggo - Tinder clone for Dogs',
-      Link: 'https://shahbaazx786.github.io/TinDoggo/',
-      screenshot: '../../assets/img/external/Project-screenshots/Tindoggo.png',
-      Desc: 'Give your Dogs love life head-start with TinDoggo',
-      stack: [
         {
-          img: '../../assets/img/external/svg/html.svg',
+          img: '../../assets/img/external/svg/nodejs.svg',
         },
         {
-          img: '../../assets/img/external/svg/css..svg',
+          img: '../../assets/img/external/svg/express-js.svg',
         },
         {
-          img: '../../assets/img/external/svg/javascript.svg',
-        },
-      ],
-    },
-    {
-      Name: 'Roll the Dice',
-      Link: 'https://shahbaazx786.github.io/Roll-the-dice/',
-      screenshot:
-        '../../assets/img/external/Project-screenshots/rollthedice.png',
-      Desc: 'The classic roll the dice website.',
-      stack: [
-        {
-          img: '../../assets/img/external/svg/html.svg',
-        },
-        {
-          img: '../../assets/img/external/svg/css..svg',
-        },
-        {
-          img: '../../assets/img/external/svg/javascript.svg',
-        },
-      ],
-    },
-    {
-      Name: 'Expanding Cards Animation',
-      Link: 'https://shahbaazx786.github.io/Expanding-Cards/',
-      Desc: 'This is an animated slideshow to view pictures in the website',
-      screenshot: '../../assets/img/external/Project-screenshots/slideanimation.png',
-      stack: [
-        {
-          img: '../../assets/img/external/svg/html.svg',
-        },
-        {
-          img: '../../assets/img/external/svg/css..svg',
-        },
-        {
-          img: '../../assets/img/external/svg/javascript.svg',
-        },
-      ],
-    },
-    {
-      Name: 'Drummer X Drummer',
-      Link: 'https://shahbaazx786.github.io/DrummerXDrummer/',
-      screenshot: '../../assets/img/external/Project-screenshots/drumkit.png',
-      Desc: 'Check your Drum Kit potential by using this website',
-      stack: [
-        {
-          img: '../../assets/img/external/svg/html.svg',
-        },
-        {
-          img: '../../assets/img/external/svg/css..svg',
-        },
-        {
-          img: '../../assets/img/external/svg/javascript.svg',
-        },
-      ],
-    },
-    {
-      Name: 'Simons Game',
-      Link: 'https://shahbaazx786.github.io/JQuery-Memory-Game/',
-      screenshot:
-        '../../assets/img/external/Project-screenshots/simongame.png',
-      Desc: 'The all time favorite challenging retro game called as simon memory game',
-      stack: [
-        {
-          img: '../../assets/img/external/svg/html.svg',
-        },
-        {
-          img: '../../assets/img/external/svg/css..svg',
-        },
-        {
-          img: '../../assets/img/external/svg/javascript.svg',
-        },
-        {
-          img: '../../assets/img/external/svg/jquery.svg',
+          img: '../../assets/img/external/svg/sql.svg',
         },
       ],
     },

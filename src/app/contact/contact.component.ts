@@ -14,7 +14,7 @@ export class ContactComponent implements OnInit {
     {
       class: 'fa-solid fa-phone',
       social: 'Phone',
-      username: '8962942505',
+      username: '+91-8962942505',
       href: 'tel:+918962942505'
     },
     {

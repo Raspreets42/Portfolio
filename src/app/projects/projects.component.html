@@ -4,11 +4,12 @@
       <h1 class="section-heading">&nbsp;Projects 📚&nbsp;</h1>
     </div>
     <div class="row">
-        <div class="card col col-lg-4 col-md-3 col-sm-11" *ngFor="let project of projects">
+        <div class="card col col-lg-4 col-md-3 col-sm-11" *ngFor="let project of projects" (click)="assignClickedProject(project)">
           <img class="card-img-top" [src]=project.screenshot alt="Card image cap">
           <div class="card-body top">
             <h5 class="card-title">{{project.Name}}</h5>
-            <p class="card-text">{{project.Desc}}</p>
+            <p class="card-text">{{project.headline}}</p>
+<!--            <p class="card-text" *ngFor="let d of project.Desc.split('\n')">{{d}}</p>-->
           </div>
           <div class="card-body bottom">
             <ng-container class="stack" *ngFor="let item of project.stack">
@@ -16,6 +17,26 @@
             </ng-container>
           </div>
         </div>
+    </div>
+  </div>
+</div>
+
+
+
+<div class="modal-overlay" *ngIf="showModal">
+  <div class="modal-content">
+    <h3>Roles and Responsibilities</h3>
+
+    <div class="row">
+      <h4> {{clickedProject['role']}} </h4>
+    </div>
+
+    <div class="row">
+      <p class="card-text" *ngFor="let d of clickedProject['Desc'].split('\n')">{{d}}</p>
+    </div>
+
+    <div class="button-group">
+      <button type="button" (click)="onClose()">Cancel</button>
     </div>
   </div>
 </div>
