@@ -26,3 +26,11 @@ Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To u
 
 ## Further help
 Ping me on LinkdIn for any doubts on angular/hosting on firebase and I'll try my best to help if god wills.
+
+## Firebase Deployment
+Commands I used for firement deployment : 
+  - npm i firebase
+  - firebase login
+  - firebase init
+  - npm run build -- --configuration production
+  - firebase deploy
