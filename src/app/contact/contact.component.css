@@ -75,6 +75,9 @@ i:hover {
     flex-direction: row;
     justify-content: space-evenly;
   }
+  i{
+    font-size: 3rem;
+  }
 }
 @media screen and (max-width:576px) {
   .row {

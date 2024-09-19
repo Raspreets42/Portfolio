@@ -221,6 +221,8 @@ div:nth-child(2){
     left: 0;
     filter: drop-shadow(0 1mm 1mm black);
     /* will remove the drop shodow later as it is a bit weird when navbar doesnt have a dropshadow */
+
+    visibility: hidden;
   }
 
   .nav-link-X{
