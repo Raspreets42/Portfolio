@@ -77,3 +77,13 @@
 .resp-item{
   font-size: small;
 }
+
+
+@media (max-width: 1216px) {
+  .left-side{
+    display: none;
+  }
+  .right-side{
+    margin-left: 20px;
+  }
+}
